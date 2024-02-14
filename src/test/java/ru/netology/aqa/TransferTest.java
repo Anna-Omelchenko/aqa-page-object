@@ -1,6 +1,5 @@
 package ru.netology.aqa;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.netology.aqa.data.DataHelper;
 import ru.netology.aqa.page.LoginPage;
@@ -48,7 +47,6 @@ public class TransferTest {
         assertEquals(card0002InitialBalance, dashboardPage.getCard0002Balance());
     }
 
-    @Disabled
     @Test
     void shouldNotAllowToTransferFromSameCard() {
         open("http://localhost:9999");
@@ -61,7 +59,6 @@ public class TransferTest {
         transferPage.shouldDisplayErrorNotification();
     }
 
-    @Disabled
     @Test
     void shouldNotAllowNegativeBalance() {
         open("http://localhost:9999");
